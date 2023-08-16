@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Joker</title>
+</head>
+<% if(locals.joke) {%>
+    <body onload="playsound()">
+    <% } else {%>
+<body>
+<% } %>
+    <div>
+        <% if(!locals.joke && !locals.error) {%>
+        <form action="/" method="POST">
+            
+            <button type="submit">
+                <img src="/joker_card.jpg" alt="" height="510px" width="340px">
+            </button>
+        </form>
+        <% } else if(!locals.error) { %>
+            <div class="joke">
+                <h2>
+                    <%= joke.build %>
+                    <br>
+                    <%= joke.punch %>
+                </h2>
+            </div>
+        <% } else { %>
+            <p> <%= error %></p>
+        <% } %>
+        
+    </div>
+    <script src="/frontend.js" charset="utf-8"></script>
+</body>
+</html>

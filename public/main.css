@@ -1,0 +1,36 @@
+body 
+{
+    background-image:url("../back.jpg");
+    background-size: 100% ,100%;
+}
+
+div 
+{
+    display:flex;
+    justify-content: center;
+    
+}
+button
+{
+    margin-top: 275px;
+    border-radius: 7%;
+    perspective: 1000px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+button:hover
+{
+    border: 5px solid rgb(255, 0, 0);
+    transform: rotateY(180deg);
+}
+img
+{
+    border-radius: 7%;
+}
+.joke
+{
+    margin-top: 450px;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 1px red;
+    max-width: 340px;
+}
